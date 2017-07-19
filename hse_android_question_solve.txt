@@ -1,0 +1,30 @@
+1.在RelativeLayout的子空间里，使用以下3个属性设置居中：
+		android:layout_centerVertical="true"
+		android:layout_centerHorizontal="true"
+		android:layout_centerInParent="true"
+gravity 一般是针对linearlayout会使用很方便。
+
+2.Fragment中，import android.app.Fragment 和 import android.support.v4.app.Fragment 有很大区别；
+	对使用android.app.Fragment：
+		（1）要用 getActivity().findViewById() 来寻找控件的ID；
+		（2）setOnClickListener(this)要在onActivityCreated()方法中调用，在onCreateView()方法中不能调用；
+		（3）跳转到activity：Intent intent = new Intent(getActivity(), *.class);
+
+3.fragment在v4包和app包中的区别用getSupportFragmentManager和getFragmentManager
+	getFragmentManager()和getSupportFragmentManager()区别
+	当api>=14时，使用getFragmentManager()，有时候使用Fragment的时候为了兼容低版本，
+	会引入Android-support-v4.jar支持包，这个时候，需要使用getSupportFragmentManager()
+
+4.尽量不要用app包中的fragment，因为这个是在3.0之后才有的，支持的版本太高，在低版本中是是用不了的
+	android.support.v4.app.Fragment：可以兼容到1.6的版本，
+
+5.LinearLayout被其他控件覆盖，要想LinearLayout有点击颜色改变效果，
+	重点在LinearLayout控件，一定要加入clickable属性为true.
+
+6.sqlite：adb shell管理手机文件，su命令索要root权限，否则opendir failed, Permission denied报错。
+
+7.sqlite：版本很重要！！！
+	每次重新创建表都必须把版本加一，onUpgrade()方法才会执行，继而调用onCreate()方法才会执行。
+
+8.AssetsDatabaseManager只能调用一次，再次运行先卸载已安装的apk！！！
+	相当于还是sqlite的版本问题，再次运行必须更高版本。
