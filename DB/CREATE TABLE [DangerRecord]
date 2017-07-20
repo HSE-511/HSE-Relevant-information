@@ -19,5 +19,6 @@ CREATE TABLE [DangerRecord] (
 		[Photo4] varchar(50),
 		[OK] integer,
 		[Upload_status] integer,
+		[rank] varchar(20),
 	PRIMARY KEY ([ID])
 );
