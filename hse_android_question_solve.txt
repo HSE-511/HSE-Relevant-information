@@ -28,3 +28,5 @@ gravity 一般是针对linearlayout会使用很方便。
 
 8.AssetsDatabaseManager只能调用一次，再次运行先卸载已安装的apk！！！
 	相当于还是sqlite的版本问题，再次运行必须更高版本。
+
+9.new new new 记住new！！！一切皆对象，new一个对象才能调用！
