@@ -1,0 +1,18 @@
+CREATE TABLE [AccidentRecord] (
+		[ID] integer NOT NULL COLLATE NOCASE,
+		[SafeStaff_ID] integer NOT NULL,
+		[WorkItem] varchar(40) NOT NULL,
+		[CompanyID] varchar(20) NOT NULL,
+		[AccidentDate] datetime NOT NULL,
+		[Name] varchar(50) NOT NULL,
+		[Type] varchar(50) NOT NULL,
+		[AccidentRank] varchar(50),
+		[Procedure] varchar(500) NOT NULL,
+		[Description] varchar(200),
+		[Duty] varchar(20),
+		[Measure] varchar(20),
+		[Approve] integer,
+		[Photo1] varchar(50),
+		[Photo2] varchar(50),
+	PRIMARY KEY ([ID])
+);

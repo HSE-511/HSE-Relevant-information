@@ -1,0 +1,15 @@
+CREATE TABLE [EventRecord] (
+		[ID] integer NOT NULL COLLATE NOCASE,
+		[SafeStaff_ID] integer NOT NULL,
+		[WorkItem] varchar(40) NOT NULL,
+		[CompanyID] varchar(20) NOT NULL,
+		[EventDate] datetime NOT NULL,
+		[Name] varchar(50) NOT NULL,
+		[Type] varchar(50),
+		[Procedure] varchar(500),
+		[Description] varchar(500),
+		[Approve] integer,
+		[Photo1] varchar(50),
+		[Photo2] varchar(50),
+	PRIMARY KEY ([ID])
+);
