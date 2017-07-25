@@ -30,3 +30,5 @@ gravity 一般是针对linearlayout会使用很方便。
 	相当于还是sqlite的版本问题，再次运行必须更高版本。
 
 9.new new new 记住new！！！一切皆对象，new一个对象才能调用！
+
+10.在subList 场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、删除，均产生ConcurrentModificationException 异常。（见阿里巴巴java开发手册（五）集合处理 第3条  ）
