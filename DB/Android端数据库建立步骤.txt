@@ -1,0 +1,4 @@
+1.从SqlServer导出数据：Staff、Company、Factory_2017、FactorHse、FactorSource、FactorDepartment、FactorObserver（隐患不用） 七张表。
+2.CREATE TABLE [DangerRecord]
+3.CREATE TABLE [AccidentRecord]
+4.CREATE TABLE [EventRecord]
